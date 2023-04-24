@@ -5,9 +5,14 @@ const addTaskBtn = document.querySelector(".add__task__btn");
 const ulTasks = document.querySelector(".ul__tasks");
 const header = document.querySelector(".header__task-2");
 const message = document.querySelector(".send__message");
+
+// Mode
+const body = document.querySelector("body");
+const light = document.querySelector(".fa-sun");
+const dark = document.querySelector(".fa-moon");
 // Selectors
 
-const tasks = [];
+let tasks = [];
 
 // Event Listeners & Functions
 addTaskBtn.addEventListener("click", (e) => {
@@ -63,9 +68,6 @@ function createTaskElements(getInputValue) {
   liTask.appendChild(enteredTask);
   ulTasks.appendChild(liTask);
 
-  // Saving all tasks to array
-  tasks.push(getInputValue);
-
   // Header
   header.textContent = "Tasks";
 
@@ -101,5 +103,45 @@ function createTaskElements(getInputValue) {
       header.textContent = "";
     }
   });
+
+  let localItems = JSON.parse(localStorage.getItem("tasks"));
+  if (localItems === null) {
+    tasks = [];
+    ulTasks.appendChild(liTask);
+  } else {
+    taskList = localItems;
+  }
+
+  tasks.push(getInputValue);
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+// Switch Mode
+light.addEventListener("click", () => {
+  localStorage.setItem("mode", "light");
+  lighter();
+});
+
+dark.addEventListener("click", () => {
+  localStorage.setItem("mode", "dark");
+  darker();
+});
+
+if (localStorage.getItem("mode") == "light") {
+  lighter();
+} else {
+  darker();
+}
+
+function lighter() {
+  body.style.backgroundColor = "#fff";
+  light.style.display = "none";
+  dark.style.display = "block";
+}
+
+function darker() {
+  body.style.backgroundColor = "#374151";
+  dark.style.display = "none";
+  light.style.display = "block";
 }
 // Event Listeners & Functions
