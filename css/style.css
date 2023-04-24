@@ -1,0 +1,147 @@
+/* General Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #374151;
+  font-family: "SF Pro Display", sans-serif;
+  padding: 5rem;
+}
+/* General Styles */
+
+/* Container Styles */
+.page__container {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.header__task-1 {
+  font-size: 4rem;
+  padding-bottom: 1rem;
+  color: gray;
+  letter-spacing: 0.2rem;
+  margin-left: 5rem;
+}
+
+.add__task__form {
+  display: flex;
+  width: 90%;
+  position: relative;
+}
+
+#input__your__task {
+  padding: 1.2rem 1rem 1.2rem 2rem;
+  font-size: 2.2rem;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-radius: 2.8rem;
+  background-color: #000;
+  width: 87%;
+  color: gray;
+  margin: 0 auto;
+}
+
+#input__your__task::placeholder {
+  color: gray;
+}
+
+.add__task__btn {
+  position: absolute;
+  left: 75%;
+  top: 8%;
+  padding: 1rem;
+  background: transparent;
+  outline: none;
+  color: rgb(115, 38, 203);
+  border: none;
+  font-size: 2.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.header__task-2 {
+  padding-top: 2rem;
+  font-size: 2.4rem;
+  color: gray;
+  letter-spacing: 0.2rem;
+  margin-left: 5rem;
+}
+
+.tasks__modal {
+  width: 90%;
+  position: relative;
+}
+
+.li__task {
+  list-style: none;
+}
+
+.entered__task {
+  display: flex;
+}
+
+.each__task__input {
+  padding: 1.2rem 1rem 1.2rem 2rem;
+  font-size: 2rem;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-radius: 2.8rem;
+  background-color: #000;
+  color: gray;
+  width: 87%;
+  margin: 1rem auto;
+  overflow-x: scroll;
+}
+
+.each__task__input::placeholder {
+  color: gray;
+}
+
+.edit__del__update__btns {
+  position: absolute;
+  margin-top: 2.6rem;
+  right: 8%;
+}
+
+.edit__del__update__btns .btn {
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: rgb(115, 38, 203);
+  font-weight: bold;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.btn:nth-child(2) {
+  color: green;
+}
+
+.btn:nth-child(3) {
+  color: rgb(168, 12, 12);
+}
+
+.send__message {
+  padding: 1rem 0;
+  font-weight: bold;
+  font-size: 1.7rem;
+  letter-spacing: 0.1rem;
+  margin-left: 5rem;
+  color: rgb(168, 12, 12);
+  transition: all 0.3s linear;
+}
+/* Container Styles */
