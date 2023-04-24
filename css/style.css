@@ -24,17 +24,36 @@ body {
   padding: 20px 0;
 }
 
+.change__mode {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.fa-sun,
+.fa-moon {
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: yellow;
+}
+
+.fa-moon {
+  display: none;
+  color: rgb(115, 38, 203);
+}
+
 .header__task-1 {
   font-size: 4rem;
   padding-bottom: 1rem;
   color: gray;
   letter-spacing: 0.2rem;
-  margin-left: 5rem;
+  margin-left: 10rem;
 }
 
 .add__task__form {
   display: flex;
   width: 90%;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -75,12 +94,13 @@ body {
   font-size: 2.4rem;
   color: gray;
   letter-spacing: 0.2rem;
-  margin-left: 5rem;
+  margin-left: 10rem;
 }
 
 .tasks__modal {
   width: 90%;
   position: relative;
+  margin: 0 auto;
 }
 
 .li__task {
